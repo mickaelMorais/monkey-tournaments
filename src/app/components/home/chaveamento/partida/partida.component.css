@@ -1,0 +1,31 @@
+.partida{
+      height: 130px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+}
+.direito{
+      border-right: 1px solid #fff;
+}
+.esquerdo{
+      border-left: 1px solid #fff;
+}
+.equipe{
+      width: 100%;
+      height: 30px;
+      border: 1px solid #fff;
+      background-color: #0f0;
+      cursor: pointer;
+      transition: all .3s ease;
+}
+.chave-2 .equipe{
+      border-left: none;
+}
+.chave-1 .equipe{
+      border-right: none;
+}
+.derrotado{
+      background-color: #000;
+      text-decoration: line-through;
+}

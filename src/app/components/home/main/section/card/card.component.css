@@ -1,0 +1,17 @@
+.card{
+      padding: 1.5rem;
+      background-color: #00f;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 350px;
+      color: #fff;
+}
+.card img{
+      border-radius: .5rem;
+}
+.valores{
+      display: flex;
+      justify-content: space-between;
+}

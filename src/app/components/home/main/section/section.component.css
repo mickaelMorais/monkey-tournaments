@@ -1,0 +1,10 @@
+h1{
+      font-size: 40px;
+      margin: 25px;
+      color: #fff;
+}
+.cards{
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+}

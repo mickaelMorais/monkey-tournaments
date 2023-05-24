@@ -1,0 +1,55 @@
+<section class="container">
+      <section class="chaves">
+            <section class="chave-1">
+                  <section class="oitavas">
+                        <app-partida *ngFor="let item of equipes[0]; let i = index" [nomeEquipe]="equipes[0][i]" [lado]="direito" [numberEquipe]="equipes[0][i].numEquipe"></app-partida>
+                  </section>
+
+                  <section class="quartas">
+                        <section class="partida">
+                              <p class="equipe">Equipe 1</p>
+                              <p class="equipe">Equipe 3</p>
+                        </section>
+                        <section class="partida">
+                              <p class="equipe">Equipe 6</p>
+                              <p class="equipe">Equipe 7</p>
+                        </section>
+                  </section>
+
+                  <section class="semi-final">
+                        <section class="partida">
+                              <p class="equipe">Equipe 1</p>
+                              <p class="equipe">Equipe 7</p>
+                        </section>
+                  </section>
+
+                  <p class="finalista">Equipe 7</p>
+            </section>
+            <p>Final</p>
+            <section class="chave-2">
+                  <section class="oitavas">
+                        <app-partida *ngFor="let item of equipes[0]; let i = index" [nomeEquipe]="equipes[1][i]" [lado]="esquerdo" [numberEquipe]="equipes[1][i].numEquipe"></app-partida>
+                  </section>
+
+                  <section class="quartas">
+                        <section class="partida">
+                              <p class="equipe">Equipe 9</p>
+                              <p class="equipe">Equipe 11</p>
+                        </section>
+                        <section class="partida">
+                              <p class="equipe">Equipe 14</p>
+                              <p class="equipe">Equipe 16</p>
+                        </section>
+                  </section>
+
+                  <section class="semi-final">
+                        <section class="partida">
+                              <p class="equipe">Equipe 9</p>
+                              <p class="equipe">Equipe 14</p>
+                        </section>
+                  </section>
+
+                  <p class="equipe finalista">Equipe 9</p>
+            </section>
+      </section>
+</section>

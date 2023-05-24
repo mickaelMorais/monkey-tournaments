@@ -1,0 +1,126 @@
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+
+}
+.container{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+}
+.chaves{
+      height: 100%;
+      width: 100%;
+      padding: 0 2em;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+}
+.chave-1, .chave-2{
+      height: 86%;
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+}
+.chave-2{
+      flex-direction: row-reverse;
+}
+.oitavas{
+      height: 100%;
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+}
+.quartas{
+      height: 85%;
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      
+}
+.semi-final{
+      height: 60%;
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+}
+.chave-1 > .oitavas, .chave-2 > .oitavas{
+      flex-direction: column;
+}
+.oitavas .partida{
+      height: 20%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+}
+.quartas .partida{
+      height: 37%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+}
+.semi-final .partida{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+}
+.chave-1 .partida{
+      border-right: 1px solid #fff;
+}
+.chave-1 .quartas .partida{
+      border-left: none;
+}
+.chave-2 .partida{
+      border-left: 1px solid #fff;
+}
+.equipe{
+      width: 100%;
+      height: 30px;
+      padding: .25rem;
+      border: 1px solid #fff;
+}
+.oitavas .equipe{
+      background-color: #0f0;
+}
+.quartas .equipe{
+      background-color: rgb(199, 199, 79);
+}
+.semi-final .equipe{
+      background-color: #00f;
+}
+.chave-1 .quartas .equipe, .chave-1 .semi-final .equipe{
+      border-left: none;
+}
+.chave-2 .quartas .equipe{
+      border-right: none;
+}
+.chave-2 .partida > .equipe{
+      border-left: none;
+}
+.chave-1 .equipe{
+      border-right: none;
+}
+.finalista{
+      background-color: #f00;
+      width: 25%;
+      padding: .25rem;
+      border: 1px solid #fff;
+}
