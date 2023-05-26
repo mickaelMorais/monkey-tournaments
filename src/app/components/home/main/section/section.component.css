@@ -8,4 +8,18 @@ h1{
       flex-direction: row;
       gap: 20px;
       overflow-x: scroll;
+      scroll-behavior: smooth;
+      /* scroll-margin-top: 20px; */
+}
+.cards::-webkit-scrollbar{
+      border-radius: 1rem;
+      scroll-margin-top: 10px;
+}
+.cards::-webkit-scrollbar-thumb{
+      border-radius: 1rem;
+      background-color: #00f;
+}
+.cards::-webkit-scrollbar-track-piece{
+      border-radius: 1rem;
+      background-color: #131459;
 }

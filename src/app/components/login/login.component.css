@@ -1,204 +1,196 @@
 @property --rotate {
-    syntax: "<angle>";
-    initial-value: 132deg;
-    inherits: false;
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
 }
 
 :root {
-    --card-height: 70vh;
-    --card-width: var(--card-height);
+  --card-height: 70vh;
+  --card-width: var(--card-height);
 }
 
 * {
-    box-sizing: border-box;
-    position: relative;
+  box-sizing: border-box;
+  position: relative;
 }
 
-.container{
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.container {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
-    margin: 16px;
+  margin: 16px;
 }
 
 .card-login {
-    background: #191c29;
-    width: 70vh;
-    padding: 3px;
-    padding-bottom: 5rem;
-    position: relative;
-    border-radius: 6px;
-    justify-content: start;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-size: 1.5em;
-    color: rgb(88 199 250 / 100%);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    gap: 50px;
+  background: #191c29;
+  width: 40vw;
+  padding: 3px;
+  padding-bottom: 2rem;
+  position: relative;
+  border-radius: 6px;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5em;
+  color: rgb(88 199 250 / 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  gap: 50px;
 }
 .card-login::before {
-    content: '';
-    width: 103%;
-    height: 102%;
-    border-radius: 8px;
-    background-image: linear-gradient(var(--rotate), aqua, #3c67e3 43%, #4e00c2);
-    position: absolute;
-    top: -1%;
-    left: -1%;
-    z-index: -1;
-    animation: spin 2.5s linear infinite;
+  content: "";
+  width: 103%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(var(--rotate), aqua, #3c67e3 43%, #4e00c2);
+  position: absolute;
+  top: -1%;
+  left: -1%;
+  z-index: -1;
+  animation: spin 2.5s linear infinite;
 }
 .card-login::after {
-    position: absolute;
-    content: '';
-    top: calc(70vh / 6);
-    left: 0;
-    right: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    filter: blur(calc(70vh / 6));
-    background-image: linear-gradient(var(--rotate), aqua, #3c67e3 43%, #4e00c2);
-    opacity: 1;
-    transition: opacity 0.5s;
-    animation: spin 2.5s linear infinite;
+  position: absolute;
+  content: "";
+  top: calc(70vh / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  filter: blur(calc(70vh / 6));
+  background-image: linear-gradient(var(--rotate), aqua, #3c67e3 43%, #4e00c2);
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: spin 2.5s linear infinite;
 }
 
 @keyframes spin {
-    0% {
-        --rotate: 0deg;
-    }
+  0% {
+    --rotate: 0deg;
+  }
 
-    100% {
-        --rotate: 360deg
-    }
+  100% {
+    --rotate: 360deg;
+  }
 }
 
 .inputs-container {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  gap: 35px;
 }
 
-.inputs-container>p {
-    font-size: 16px;
-    margin: 0;
+.inputs-container > p {
+  font-size: 16px;
+  margin: 0;
 }
 
-.inputs-container>p>a {
-    color: #fff;
-    text-decoration: none;
+.inputs-container > p > a {
+  color: #fff;
+  text-decoration: none;
 }
 
-.inputs-container>p>a:hover {
-    color: #fff;
-    text-decoration: underline;
+.inputs-container > p > a:hover {
+  color: #fff;
+  text-decoration: underline;
 }
 
-.inputs-container>button {
-    height: 55px;
-    border: none;
-    border-radius: 8px;
-    background: rgb(88 199 250 / 100%);
-    outline: 0;
-    color: #212534;
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
+.botao {
+  width: 100%;
+  height: 55px;
+  border: none;
+  border-radius: 8px;
+  background: rgb(88 199 250 / 100%);
+  outline: 0;
+  color: #212534;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .input-container {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
 }
 
-.input-container>input {
-    height: 55px;
-    padding: 23px 15px 7px 15px;
-    width: 100%;
-    border: none;
-    border-radius: 8px;
-    background-color: #212534;
-    outline: transparent;
-    color: #fff;
+.input-container > input {
+  height: 55px;
+  padding: 23px 15px 7px 15px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background-color: #212534;
+  outline: transparent;
+  color: #fff;
 }
 
-.input-container>label {
-    font-size: 16px;
-    position: absolute;
-    left: 15px;
-    top: 16px;
-    transition: .3s ease;
-    color: #aaa;
+.input-container > label {
+  font-size: 16px;
+  position: absolute;
+  left: 15px;
+  top: 16px;
+  transition: 0.3s ease;
+  color: #aaa;
 }
 
-.input-container>input:focus {
-    border: 2px solid rgb(88 199 250 / 100%);
+.input-container > input:focus {
+  border: 2px solid rgb(88 199 250 / 100%);
 }
 
-.input-container>input:focus~label {
-    top: 6px;
-    font-size: 12px;
-    color: rgb(88 199 250 / 100%);
+.input-container > input:focus ~ label {
+  top: 6px;
+  font-size: 12px;
+  color: rgb(88 199 250 / 100%);
 }
 
-.input-container>input:not(:placeholder-shown)~label {
-    top: 6px;
-    font-size: 12px;
-    color: rgb(88 199 250 / 100%);
+.input-container > input:not(:placeholder-shown) ~ label {
+  top: 6px;
+  font-size: 12px;
+  color: rgb(88 199 250 / 100%);
 }
 
 .inputs-container button:hover {
-    background-color: #3c67e3;
-    color: #fff;
-    transition: .3s ease;
+  background-color: #3c67e3;
+  color: #fff;
+  transition: 0.3s ease;
 }
 
 .button-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.button-container>button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 49.5%;
-    padding-left: 1rem;
-    text-align: start;
-    gap: 10px;
-    font-size: 18px;
-    height: 55px;
-    border: none;
-    border-radius: 8px;
-    background: rgb(88 199 250 / 100%);
-    outline: 0;
-    color: #212534;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.facebook {
-    text-align: center !important;
-    gap: 0 !important;
-}
-
-.google {
-    margin-top: 20px;
-    width: 100% !important;
+.button-container > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-left: 1rem;
+  text-align: center;
+  gap: 20px;
+  font-size: 18px;
+  height: 55px;
+  border: none;
+  border-radius: 8px;
+  background: rgb(88 199 250 / 100%);
+  outline: 0;
+  color: #212534;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
 }
