@@ -21,7 +21,7 @@
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      gap: 50px;
+      /* gap: 50px; */
 }
 .chave-1, .chave-2{
       height: 86%;
@@ -29,8 +29,25 @@
       display: flex;
       flex-direction: row;
       align-items: center;
+      justify-content: end;
+}
+.final{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 25%;
+}
+.final p{
+      margin: 0 10px;
+}
+.final > section{
+      background-color: #f00;
+      width: 100%;
+      padding: .25rem;
+      border: 1px solid #fff;
 }
 .chave-2{
+      justify-content: start;
       flex-direction: row-reverse;
 }
 .oitavas{
@@ -118,9 +135,28 @@
 .chave-1 .equipe{
       border-right: none;
 }
-.finalista{
-      background-color: #f00;
-      width: 25%;
-      padding: .25rem;
+.partida{
+      height: 130px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+}
+.direito{
+      border-right: 1px solid #fff;
+}
+.esquerdo{
+      border-left: 1px solid #fff;
+}
+.equipe{
+      width: 100%;
+      height: 30px;
       border: 1px solid #fff;
+      background-color: #0f0;
+      cursor: pointer;
+      transition: all .3s ease;
+}
+.derrotado{
+      background-color: #000 !important;
+      text-decoration: line-through;
 }

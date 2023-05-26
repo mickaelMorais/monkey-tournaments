@@ -19,12 +19,6 @@
       cursor: pointer;
       transition: all .3s ease;
 }
-.chave-2 .equipe{
-      border-left: none;
-}
-.chave-1 .equipe{
-      border-right: none;
-}
 .derrotado{
       background-color: #000;
       text-decoration: line-through;

@@ -1,55 +1,98 @@
 <section class="container">
       <section class="chaves">
             <section class="chave-1">
-                  <section class="oitavas">
-                        <app-partida *ngFor="let item of equipes[0]; let i = index" [nomeEquipe]="equipes[0][i]" [lado]="direito" [numberEquipe]="equipes[0][i].numEquipe"></app-partida>
+                  <section id="oitavas-1" class="oitavas">
+                        <section class="partida direito">
+                              <section (click)="getWinner($event.target, 0)" class="equipe chave1 equipe-{{ equipesChave1[0].numEquipe[0] }}">{{ equipesChave1[0].equipe1 }}</section>
+                              <section (click)="getWinner($event.target, 0)" class="equipe chave1 equipe-{{ equipesChave1[0].numEquipe[1] }}">{{ equipesChave1[0].equipe2 }}</section>
+                        </section>
+
+                        <section class="partida direito">
+                              <section (click)="getWinner($event.target, 1)" class="equipe chave1 equipe-{{ equipesChave1[1].numEquipe[0] }}">{{ equipesChave1[1].equipe1 }}</section>
+                              <section (click)="getWinner($event.target, 1)" class="equipe chave1 equipe-{{ equipesChave1[1].numEquipe[1] }}">{{ equipesChave1[1].equipe2 }}</section>
+                        </section>
+
+                        <section class="partida direito">
+                              <section (click)="getWinner($event.target, 2)" class="equipe chave1 equipe-{{ equipesChave1[2].numEquipe[0] }}">{{ equipesChave1[2].equipe1 }}</section>
+                              <section (click)="getWinner($event.target, 2)" class="equipe chave1 equipe-{{ equipesChave1[2].numEquipe[1] }}">{{ equipesChave1[2].equipe2 }}</section>
+                        </section>
+
+                        <section class="partida direito">
+                              <section (click)="getWinner($event.target, 3)" class="equipe chave1 equipe-{{ equipesChave1[3].numEquipe[0] }}">{{ equipesChave1[3].equipe1 }}</section>
+                              <section (click)="getWinner($event.target, 3)" class="equipe chave1 equipe-{{ equipesChave1[3].numEquipe[1] }}">{{ equipesChave1[3].equipe2 }}</section>
+                        </section>
                   </section>
 
-                  <section class="quartas">
-                        <section class="partida">
-                              <p class="equipe">Equipe 1</p>
-                              <p class="equipe">Equipe 3</p>
+                  <section id="quartas-1" class="quartas">
+                        <section class="partida esquerdo">
+                              <section (click)="getWinner($event.target, 0)" class="equipe chave1 equipe-{{ vencedoresOitavas1[0].numEquipe[0] }}">{{ vencedoresOitavas1[0].equipe1 }}</section>
+                              <section (click)="getWinner($event.target, 0)" class="equipe chave1 equipe-{{ vencedoresOitavas1[0].numEquipe[1] }}">{{ vencedoresOitavas1[0].equipe2 }}</section>
                         </section>
-                        <section class="partida">
-                              <p class="equipe">Equipe 6</p>
-                              <p class="equipe">Equipe 7</p>
+
+                        <section class="partida esquerdo">
+                              <section (click)="getWinner($event.target, 1)" class="equipe chave1 equipe-{{ vencedoresOitavas1[1].numEquipe[0] }}">{{ vencedoresOitavas1[1].equipe1 }}</section>
+                              <section (click)="getWinner($event.target, 1)" class="equipe chave1 equipe-{{ vencedoresOitavas1[1].numEquipe[1] }}">{{ vencedoresOitavas1[1].equipe2 }}</section>
                         </section>
                   </section>
 
                   <section class="semi-final">
-                        <section class="partida">
-                              <p class="equipe">Equipe 1</p>
-                              <p class="equipe">Equipe 7</p>
+                        <section class="partida direito">
+                              <section (click)="getWinner($event.target, 0)" class="equipe chave1 equipe-{{ vencedoresQuartas1.numEquipe[0] }}">{{ vencedoresQuartas1.equipe1 }}</section>
+                              <section (click)="getWinner($event.target, 0)" class="equipe chave1 equipe-{{ vencedoresQuartas1.numEquipe[1] }}">{{ vencedoresQuartas1.equipe2 }}</section>
                         </section>
                   </section>
 
-                  <p class="finalista">Equipe 7</p>
             </section>
-            <p>Final</p>
+            <section class="final">
+                  <section (click)="getWinner($event.target, 0)" class="equipe chave1 equipe-{{ finalistas.numEquipe[0] }}">{{ finalistas.equipe1 }}</section>
+                  <p>Final</p>
+                  <section (click)="getWinner($event.target, 0)" class="equipe equipe-{{ finalistas.numEquipe[1] }}">{{ finalistas.equipe2 }}</section>
+            </section>
             <section class="chave-2">
-                  <section class="oitavas">
-                        <app-partida *ngFor="let item of equipes[0]; let i = index" [nomeEquipe]="equipes[1][i]" [lado]="esquerdo" [numberEquipe]="equipes[1][i].numEquipe"></app-partida>
+                  <!-- oitavas -->
+                  <section id="oitavas-2" class="oitavas">
+                        <!-- <app-partida *ngFor="let item of equipes[0]; let i = index" [nomeEquipe]="equipes[1][i]" [lado]="esquerdo" [numberEquipe]="equipes[1][i].numEquipe"></app-partida> -->
+                        <section class="partida esquerdo">
+                              <section (click)="getWinner($event.target, 0)" class="equipe  equipe-{{ equipesChave2[0].numEquipe[0] }}">{{equipesChave2[0].equipe1 }}</section>
+                              <section (click)="getWinner($event.target, 0)" class="equipe  equipe-{{ equipesChave2[0].numEquipe[1] }}">{{ equipesChave2[0].equipe2 }}</section>
+                        </section>
+
+                        <section class="partida esquerdo">
+                              <section (click)="getWinner($event.target, 1)" class="equipe  equipe-{{ equipesChave2[1].numEquipe[0] }}">{{ equipesChave2[1].equipe1 }}</section>
+                              <section (click)="getWinner($event.target, 1)" class="equipe  equipe-{{ equipesChave2[1].numEquipe[1] }}">{{ equipesChave2[1].equipe2 }}</section>
+                        </section>
+
+                        <section class="partida esquerdo">
+                              <section (click)="getWinner($event.target, 2)" class="equipe  equipe-{{ equipesChave2[2].numEquipe[0] }}">{{ equipesChave2[2].equipe1 }}</section>
+                              <section (click)="getWinner($event.target, 2)" class="equipe  equipe-{{ equipesChave2[2].numEquipe[1] }}">{{ equipesChave2[2].equipe2 }}</section>
+                        </section>
+
+                        <section class="partida esquerdo">
+                              <section (click)="getWinner($event.target, 3)" class="equipe  equipe-{{ equipesChave2[3].numEquipe[0] }}">{{ equipesChave2[3].equipe1 }}</section>
+                              <section (click)="getWinner($event.target, 3)" class="equipe  equipe-{{ equipesChave2[3].numEquipe[1] }}">{{ equipesChave2[3].equipe2 }}</section>
+                        </section>
                   </section>
 
-                  <section class="quartas">
-                        <section class="partida">
-                              <p class="equipe">Equipe 9</p>
-                              <p class="equipe">Equipe 11</p>
+                  <!-- quartas -->
+                  <section id="quartas-2" class="quartas">
+                        <section class="partida esquerdo">
+                              <section (click)="getWinner($event.target, 0)" class="equipe equipe-{{ vencedoresOitavas2[0].numEquipe[0] }}">{{ vencedoresOitavas2[0].equipe1 }}</section>
+                              <section (click)="getWinner($event.target, 0)" class="equipe equipe-{{ vencedoresOitavas2[0].numEquipe[1] }}">{{ vencedoresOitavas2[0].equipe2 }}</section>
                         </section>
-                        <section class="partida">
-                              <p class="equipe">Equipe 14</p>
-                              <p class="equipe">Equipe 16</p>
+                        <section class="partida esquerdo">
+                              <section (click)="getWinner($event.target, 1)" class="equipe equipe-{{ vencedoresOitavas2[1].numEquipe[0] }}">{{ vencedoresOitavas2[1].equipe1 }}</section>
+                              <section (click)="getWinner($event.target, 1)" class="equipe equipe-{{ vencedoresOitavas2[1].numEquipe[1] }}">{{ vencedoresOitavas2[1].equipe2 }}</section>
                         </section>
                   </section>
 
                   <section class="semi-final">
-                        <section class="partida">
-                              <p class="equipe">Equipe 9</p>
-                              <p class="equipe">Equipe 14</p>
+                        <section class="partida esquerdo">
+                              <section (click)="getWinner($event.target, 0)" class="equipe equipe-{{ vencedoresQuartas2.numEquipe[0] }}">{{ vencedoresQuartas2.equipe1 }}</section>
+                              <section (click)="getWinner($event.target, 0)" class="equipe equipe-{{ vencedoresQuartas2.numEquipe[1] }}">{{ vencedoresQuartas2.equipe2 }}</section>
                         </section>
                   </section>
 
-                  <p class="equipe finalista">Equipe 9</p>
+                  <!-- <p class="equipe finalista">Equipe 9</p> -->
             </section>
       </section>
 </section>
